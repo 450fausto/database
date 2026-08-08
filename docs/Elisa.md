@@ -83,13 +83,14 @@ Esto evita contaminación temporal dentro de una jornada.
 Para un equipo con $GF$ y $GA$:
 
 $$
-PTS=
-\begin{cases}
-3,&GF \gt GA\
-1,&GF=GA\
-0,&GF \lt GA
+PTS = 
+\begin{cases} 
+3, & \text{GF} \gt \text{GA} \\
+1, & \text{GF} = \text{GA} \\
+0, & \text{GF} \lt \text{GA} 
 \end{cases}
 $$
+
 
 ---
 
