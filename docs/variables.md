@@ -62,19 +62,21 @@ Por ello:
 
 Las estadísticas básicas utilizadas por los modelos proceden de los resultados históricos.
 
-| Variable                  | Significado                    |
-| ------------------------- | ------------------------------ |
-| `FTHG`                    | goles del equipo local         |
-| `FTAG`                    | goles del equipo visitante     |
-| `HS`                      | tiros del equipo local         |
-| `AS`                      | tiros del equipo visitante     |
-| `HST`                     | tiros a portería del local     |
-| `AST`                     | tiros a portería del visitante |
-| amarillas local/visitante | tarjetas amarillas             |
-| rojas local/visitante     | tarjetas rojas                 |
-| `Date`                    | fecha del partido              |
-| `HomeTeam`                | equipo local                   |
-| `AwayTeam`                | equipo visitante               |
+| Variable                  | Significado                      |
+| ------------------------- | ------------------------------   |
+| `FTHG`                    | goles del equipo local           |
+| `FTAG`                    | goles del equipo visitante       |
+| `HS`                      | tiros del equipo local           |
+| `AS`                      | tiros del equipo visitante       |
+| `HST`                     | tiros a portería del local       |
+| `AST`                     | tiros a portería del visitante   |
+| `HY`                      | tarjetas amarillas del local     |
+| `AY`                      | tarjetas amarillas del visitante |
+| `HR`                      | tarjetas rojas del local         |
+| `AR`                      | tarjetas rojas del visitante     |
+| `Date`                    | fecha del partido                |
+| `HomeTeam`                | equipo local                     |
+| `AwayTeam`                | equipo visitante                 | 
 
 Los momios como:
 
