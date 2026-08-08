@@ -14,34 +14,34 @@ Los tres modelos utilizan información histórica de los partidos, pero represen
 
 Para un equipo (e), considerando exclusivamente partidos **anteriores** de la temporada actual:
 
-* (n): partidos jugados.
-* (GF): goles a favor.
-* (GA): goles en contra.
-* (TF): tiros a favor.
-* (TC): tiros en contra.
-* (TPF): tiros a portería a favor.
-* (TPC): tiros a portería en contra.
-* (PTS): puntos obtenidos.
-* (A): tarjetas amarillas.
-* (R): tarjetas rojas.
+* $n$: partidos jugados.
+* $GF$: goles a favor.
+* $GA$: goles en contra.
+* $TF$: tiros a favor.
+* $TC$: tiros en contra.
+* $TPF$: tiros a portería a favor.
+* $TPC$: tiros a portería en contra.
+* $PTS$: puntos obtenidos.
+* $A$: tarjetas amarillas.
+* $R$: tarjetas rojas.
 
 Se definen además:
 
-[
+$$
 DG=GF-GA
-]
+$$
 
-[
+$$
 DT=TF-TC
-]
+$$
 
-[
+$$
 DTP=TPF-TPC
-]
+$$
 
 Para un partido:
 
-* (L): equipo local.
+* $L): equipo local.
 * (V): equipo visitante.
 
 En Carolina y en el bloque de balance de ELISA, muchas variables se construyen mediante:
