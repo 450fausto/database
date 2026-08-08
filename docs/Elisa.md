@@ -463,7 +463,7 @@ Low_j=
 1, &GF_j+GA_j \le 2\
 0, &GF_j+GA_j \lt 2
 \end{cases}
-]
+$$
 
 ELISA toma los últimos $w$ partidos, donde `form_window` puede ser, por ejemplo, 5 u 8.
 
