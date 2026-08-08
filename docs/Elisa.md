@@ -228,57 +228,55 @@ Estos priors se recalculan constantemente usando **solo partidos anteriores**.
 
 # 6. Suavizado exacto de ELISA
 
-Aquí está una de las transformaciones que antes no dejé suficientemente explícita.
+Para una tasa cuyo total observado es $X$, obtenida en $n$ partidos, ELISA utiliza:
 
-Para una tasa cuyo total observado es (X), obtenida en (n) partidos, ELISA utiliza:
-
-[
+$$
 \boxed{
 \tilde x=
 \frac{X+s\pi_x}{n+s}
 }
-]
+$$
 
 donde:
 
-* (s) es `prior_strength`;
-* (\pi_x) es el promedio actual correspondiente de la liga.
+* $s$ es `prior_strength`;
+* $\pi_x$ es el promedio actual correspondiente de la liga.
 
 Por ejemplo, los goles anotados por partido de un equipo son:
 
-[
+$$
 \boxed{
 GFPM=
 \frac{GF+s\pi_{GF}}{n+s}
 }
-]
+$$
 
 Los goles recibidos:
 
-[
+$$
 \boxed{
 GAPM=
 \frac{GA+s\pi_{GA}}{n+s}
 }
-]
+$$
 
 Los tiros:
 
-[
+$$
 \boxed{
 SPM=
 \frac{SF+s\pi_S}{n+s}
 }
-]
+$$
 
 Los tiros a portería:
 
-[
+$$
 \boxed{
 SOTPM=
 \frac{SOTF+s\pi_T}{n+s}
 }
-]
+$$
 
 Por tanto, ELISA **no usa simplemente (GF/n)**.
 
@@ -286,20 +284,18 @@ Por tanto, ELISA **no usa simplemente (GF/n)**.
 
 # 7. Precisión de tiro
 
-La precisión necesita un suavizado ligeramente diferente.
+La precisión, necesita un suavizado ligeramente diferente.
 
 Se define primero una fuerza efectiva del prior:
 
-[
-s_{Prec}
-========
-
+$$
+s_{Prec}=
 s\max(\pi_S,1)
-]
+$$
 
 Entonces:
 
-[
+$$
 \boxed{
 Prec=
 \frac{
@@ -308,7 +304,7 @@ SOTF+s_{Prec}\pi_{Prec}
 SF+s_{Prec}
 }
 }
-]
+$$
 
 Esto es exactamente lo que implementa el código.
 
