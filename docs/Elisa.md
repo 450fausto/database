@@ -461,7 +461,7 @@ $$
 Low_j=
 \begin{cases}
 1, & GF_j+GA_j \le 2 \\
-0, & GF_j+GA_j \lt 2 
+0, & GF_j+GA_j \gt 2 
 \end{cases}
 $$
 
