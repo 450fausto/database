@@ -199,39 +199,29 @@ Compara directamente:
 
 Para el equipo local:
 
-[
-DG_L^{casa}
-===========
-
+$$
 \frac{
 GF_L^{casa}-GA_L^{casa}
 }{
 n_L^{casa}
 }
-]
+$$
 
 Para el visitante:
 
-[
-DG_V^{fuera}
-============
-
+$$
 \frac{
 GF_V^{fuera}-GA_V^{fuera}
 }{
 n_V^{fuera}
 }
-]
+$$
 
 Entonces:
 
-[
-x_4=
-DG_L^{casa}
------------
-
+$$
 DG_V^{fuera}
-]
+$$
 
 Nombre:
 
