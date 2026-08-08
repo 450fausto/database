@@ -117,9 +117,9 @@ Estos valores se utilizan para construir los **priors dinámicos de la liga**.
 
 Si ya se han jugado $M$ partidos, existen:
 
-$
+$$
 2M
-$
+$$
 
 observaciones-equipo.
 
