@@ -601,35 +601,100 @@ $$
 
 ---
 
-# 8. Probabilidad de empate de Carolina
+## 8. Probabilidad de empate de Carolina
 
-Carolina ver12 utiliza:
-
-$$
-\left(
-\frac{m-c}{s}
-\right)^2
-\right]
-$$
-
-donde:
+Una vez calculadas las distancias del partido respecto al prototipo de victoria local y al prototipo de victoria visitante, Carolina define una variable de posición relativa:
 
 $$
-\sigma(x)=
-\frac{1}{1+e^{-x}}
-$$
-
-Los parámetros son:
-
-* $c$: centro óptimo de la región de empate.
-* $s$: anchura de esa región.
-* $\ell_{\max}$: controla la probabilidad máxima.
-
-Carolina reduce así las doce dimensiones originales a una coordenada geométrica:
-
-$
 m=d_L-d_V
-$
+$$
+
+La interpretación de (m) es la siguiente:
+
+* Si $m<0$, el partido se encuentra más cerca del prototipo de victoria local.
+* Si $m>0$, el partido se encuentra más cerca del prototipo de victoria visitante.
+* Si $m$ toma valores intermedios, el encuentro se encuentra en una región de mayor equilibrio entre ambos prototipos.
+
+Carolina transforma esta posición relativa en una probabilidad de empate mediante la expresión:
+
+$$
+P(D\mid m)=
+\sigma\left(
+\ell_{\max} -
+\left(\frac{m-c}{s}\right)^2
+\right)
+$$
+
+donde (\sigma(\cdot)) es la función logística:
+
+[
+\sigma(x)=\frac{1}{1+e^{-x}}
+]
+
+Por tanto, la expresión completa también puede escribirse como:
+
+[
+P(D\mid m)
+==========
+
+\frac{1}
+{1+\exp\left[
+-\ell_{\max}
++
+\left(\frac{m-c}{s}\right)^2
+\right]}
+]
+
+Los parámetros (c), (s) y (\ell_{\max}) determinan la forma de la región asociada con los empates.
+
+El parámetro (c) representa el centro de esa región. La máxima probabilidad de empate ocurre cuando:
+
+[
+m=c
+]
+
+En ese punto, el término cuadrático desaparece:
+
+[
+\left(\frac{m-c}{s}\right)^2=0
+]
+
+y la probabilidad máxima es:
+
+[
+P_{\max}
+========
+
+# \sigma(\ell_{\max})
+
+\frac{1}{1+e^{-\ell_{\max}}}
+]
+
+El parámetro (s) controla la anchura de la región de empate. Valores mayores de (s) hacen que la probabilidad disminuya más lentamente cuando (m) se aleja de (c), mientras que valores menores producen una región más estrecha.
+
+El término
+
+[
+\left(\frac{m-c}{s}\right)^2
+]
+
+hace que la probabilidad disminuya tanto cuando (m) se desplaza hacia el lado del prototipo local como cuando se desplaza hacia el lado del prototipo visitante. Lo importante es la distancia respecto al centro (c), no la dirección del desplazamiento.
+
+Una característica importante del modelo es que el máximo de probabilidad no tiene que encontrarse necesariamente en (m=0). Aunque (m=0) representa un partido situado a la misma distancia de los dos prototipos, los datos históricos pueden indicar que los empates se concentran en una región ligeramente desplazada. El parámetro (c) permite que el modelo aprenda ese desplazamiento.
+
+En términos conceptuales, Carolina realiza la siguiente reducción:
+
+[
+\text{12 características del partido}
+\longrightarrow
+(d_L,d_V)
+\longrightarrow
+m
+\longrightarrow
+P(D)
+]
+
+De esta manera, la información multidimensional original queda resumida en la posición relativa del partido respecto a los prototipos de victoria local y visitante.
 
 ---
 
