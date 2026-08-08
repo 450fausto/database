@@ -107,17 +107,17 @@ $$
 
 Para cada equipo:
 
-[
+$$
 GPP_e=
 \frac{GF_e-GA_e}{n_e}
-]
+$$
 
 La variable de Carolina es:
 
-[
+$$
 x_1=
 GPP_L-GPP_V
-]
+$$
 
 Nombre:
 
@@ -127,9 +127,9 @@ Nombre:
 
 Mide la diferencia entre los saldos goleadores medios de ambos equipos.
 
-* (x_1>0): mejor balance goleador del local.
-* (x_1\approx0): equilibrio.
-* (x_1<0): mejor balance goleador del visitante.
+* $x_1>0$: mejor balance goleador del local.
+* $x_1\approx0$: equilibrio.
+* $x_1<0$: mejor balance goleador del visitante.
 
 ---
 
