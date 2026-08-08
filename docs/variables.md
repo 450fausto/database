@@ -137,17 +137,17 @@ Mide la diferencia entre los saldos goleadores medios de ambos equipos.
 
 Para un equipo:
 
-[
+$$
 TPP_e=
 \frac{TF_e-TC_e}{n_e}
-]
+$$
 
 La variable es:
 
-[
+$$
 x_2=
 TPP_L-TPP_V
-]
+$$
 
 Nombre:
 
