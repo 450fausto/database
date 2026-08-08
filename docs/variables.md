@@ -96,10 +96,10 @@ Carolina utiliza un vector de **12 variables de comparación local–visitante**
 
 Su representación general es:
 
-[
+$$
 \mathbf{x}=
 [x_1,x_2,\ldots,x_{12}]
-]
+$$
 
 ---
 
