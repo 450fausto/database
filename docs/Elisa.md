@@ -98,16 +98,16 @@ $$
 
 Además de los estados de cada equipo, ELISA mantiene un estado global de la liga.
 
-Después de (M) partidos concluidos almacena:
+Después de $M$ partidos concluidos almacena:
 
-* (G): goles totales;
-* (S): tiros totales;
-* (T): tiros a portería totales;
-* (P): puntos totales;
-* (P_H): puntos obtenidos por locales;
-* (P_A): puntos obtenidos por visitantes;
-* (G_H): goles de locales;
-* (G_A): goles de visitantes.
+* $G$: goles totales;
+* $S$: tiros totales;
+* $T$: tiros a portería totales;
+* $P$: puntos totales;
+* $P_H$: puntos obtenidos por locales;
+* $P_A$: puntos obtenidos por visitantes;
+* $G_H$: goles de locales;
+* $G_A$: goles de visitantes.
 
 Estos valores se utilizan para construir los **priors dinámicos de la liga**.
 
@@ -115,11 +115,11 @@ Estos valores se utilizan para construir los **priors dinámicos de la liga**.
 
 # 5. Priors de la liga
 
-Si ya se han jugado (M) partidos, existen:
+Si ya se han jugado $M$ partidos, existen:
 
-[
+$
 2M
-]
+$
 
 observaciones-equipo.
 
@@ -127,114 +127,100 @@ ELISA calcula:
 
 ### Goles por equipo y partido
 
-[
+$$
 \pi_{GF}=\frac{G}{2M}
-]
+$$
 
 y utiliza el mismo valor como prior de goles recibidos:
 
-[
+$$
 \pi_{GA}=\pi_{GF}
-]
+$$
 
 ### Tiros por equipo y partido
 
-[
+$$
 \pi_S=\frac{S}{2M}
-]
+$$
 
 ### Tiros a portería por equipo y partido
 
-[
+$$
 \pi_T=\frac{T}{2M}
-]
+$$
 
 ### Puntos por equipo y partido
 
-[
+$$
 \pi_P=\frac{P}{2M}
-]
+$$
 
 ### Precisión de tiro de la liga
 
-[
+$$
 \pi_{Prec}=\frac{T}{S}
-]
+$$
 
 ### Definición de la liga
 
-[
+$$
 \pi_{Def}=\frac{G}{T}
-]
+$$
 
 ### Resistencia defensiva de la liga
 
-[
-\pi_{Res}
-=========
-
+$$
+\pi_{Res}=
 \frac{T-G}{T}
-]
+$$
 
 ### Puntos del local por partido
 
-[
-\pi_{PH}
-========
-
+$$
+\pi_{PH}=
 \frac{P_H}{M}
-]
+$$
 
 ### Puntos del visitante por partido
 
-[
-\pi_{PA}
-========
-
+$$
+\pi_{PA}=
 \frac{P_A}{M}
-]
+$$
 
 ### Diferencia de goles local
 
-[
-\pi_{GD,H}
-==========
-
+$$
+\pi_{GD,H}=
 \frac{G_H-G_A}{M}
-]
+$$
 
 ### Diferencia de goles visitante
 
-[
-\pi_{GD,A}
-==========
-
+$$
+\pi_{GD,A}=
 \frac{G_A-G_H}{M}
-]
+$$
 
 Por construcción:
 
-[
+$$
 \pi_{GD,A}=-\pi_{GD,H}
-]
+$$
 
 ### Goles totales por partido
 
-[
-\pi_{GT}
-========
-
+$$
+\pi_{GT}=
 \frac{G}{M}
-]
+$$
 
 ### Tiros a portería totales por partido
 
-[
-\pi_{TT}
-========
-
+$$
+\pi_{TT}=
 \frac{T}{M}
-]
+$$
 
 Estos priors se recalculan constantemente usando **solo partidos anteriores**.
 
