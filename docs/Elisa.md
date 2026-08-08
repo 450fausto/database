@@ -314,16 +314,14 @@ Esto es exactamente lo que implementa el código.
 
 Se calcula:
 
-[
-s_{Def}
-=======
-
-s\max(\pi_T,1)
-]
+$$
+s_{Def}=
+s \max(\pi_T,1)
+$$
 
 y:
 
-[
+$$
 \boxed{
 Def=
 \frac{
@@ -332,13 +330,13 @@ GF+s_{Def}\pi_{Def}
 SOTF+s_{Def}
 }
 }
-]
+$$
 
 Por tanto, mide la conversión:
 
-[
+$$
 \text{tiros a portería}\rightarrow\text{goles}
-]
+$$
 
 regularizada hacia la media de la liga.
 
