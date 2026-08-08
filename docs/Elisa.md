@@ -85,7 +85,7 @@ Para un equipo con $GF$ y $GA$:
 $$
 PTS=
 \begin{cases}
-3,&GF \g tGA\
+3,&GF \gt GA\
 1,&GF=GA\
 0,&GF \lt GA
 \end{cases}
