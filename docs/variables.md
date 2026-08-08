@@ -165,33 +165,23 @@ Un equipo que genera sistemáticamente más tiros de los que permite tendrá un 
 
 Para el local solamente se consideran sus partidos como local:
 
-[
-PPP_L^{casa}
-============
-
+$$
 \frac{PTS_L^{casa}}
 {n_L^{casa}}
-]
+$$
 
 Para el visitante solamente se consideran sus partidos como visitante:
 
-[
-PPP_V^{fuera}
-=============
-
+$$
 \frac{PTS_V^{fuera}}
 {n_V^{fuera}}
-]
+$$
 
 Entonces:
 
-[
-x_3=
-PPP_L^{casa}
-------------
-
+$$
 PPP_V^{fuera}
-]
+$$
 
 Nombre:
 
