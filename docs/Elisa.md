@@ -381,61 +381,53 @@ Para el equipo que jugará como local se usan exclusivamente sus antecedentes co
 
 ### Puntos como local
 
-[
+$$
 \boxed{
-PtsCond_L
-=========
-
+PtsCond_L=
 \frac{
 PTS_H+s\pi_{PH}
 }{
 n_H+s
 }
 }
-]
+$$
 
 ### Diferencia de goles como local
 
-[
+$$
 \boxed{
-GDCond_L
-========
-
+GDCond_L=
 \frac{
 GD_H+s\pi_{GD,H}
 }{
 n_H+s
 }
 }
-]
+$$
 
 Para el visitante:
 
-[
+$$
 \boxed{
-PtsCond_V
-=========
-
+PtsCond_V=
 \frac{
 PTS_A+s\pi_{PA}
 }{
 n_A+s
 }
 }
-]
+$$
 
-[
+$$
 \boxed{
-GDCond_V
-========
-
+GDCond_V=
 \frac{
 GD_A+s\pi_{GD,A}
 }{
 n_A+s
 }
 }
-]
+$$
 
 ---
 
@@ -443,87 +435,87 @@ n_A+s
 
 ELISA guarda para cada partido de cada equipo seis cantidades:
 
-[
+$$
 PTS_j
-]
+$$
 
-[
+$$
 GD_j=GF_j-GA_j
-]
+$$
 
-[
+$$
 SOTD_j=SOTF_j-SOTA_j
-]
+$$
 
-[
+$$
 GT_j=GF_j+GA_j
-]
+$$
 
-[
+$$
 TSOT_j=SOTF_j+SOTA_j
-]
+$$
 
 y:
 
-[
+$$
 Low_j=
 \begin{cases}
-1,&GF_j+GA_j\le2\
-0,&GF_j+GA_j>2
+1, &GF_j+GA_j \le 2\
+0, &GF_j+GA_j \lt 2
 \end{cases}
 ]
 
-ELISA toma los últimos (w) partidos, donde `form_window` puede ser, por ejemplo, 5 u 8.
+ELISA toma los últimos $w$ partidos, donde `form_window` puede ser, por ejemplo, 5 u 8.
 
 ### Puntos de forma
 
-[
+$$
 PF=
 \frac{1}{w}
 \sum_{j=1}^{w}PTS_j
-]
+$$
 
 ### Diferencia de goles de forma
 
-[
+$$
 GDF=
 \frac{1}{w}
 \sum_{j=1}^{w}GD_j
-]
+$$
 
 ### Diferencia de tiros a portería de forma
 
-[
+$$
 SOTDF=
 \frac{1}{w}
 \sum_{j=1}^{w}SOTD_j
-]
+$$
 
 ### Goles totales de forma
 
-[
+$$
 GTF=
 \frac{1}{w}
 \sum_{j=1}^{w}GT_j
-]
+$$
 
 ### Tiros a portería totales de forma
 
-[
+$$
 TSOTF=
 \frac{1}{w}
 \sum_{j=1}^{w}TSOT_j
-]
+$$
 
 ### Propensión a marcador bajo
 
-[
+$$
 LowF=
 \frac{1}{w}
 \sum_{j=1}^{w}Low_j
-]
+$$
 
-Estos promedios recientes **no reciben el suavizado mediante (s)**.
+Estos promedios recientes **no reciben el suavizado mediante $s$**.
 
 ---
 
