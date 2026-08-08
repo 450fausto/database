@@ -41,14 +41,14 @@ $$
 
 Para un partido:
 
-* $L): equipo local.
-* (V): equipo visitante.
+* $L$: equipo local.
+* $V$: equipo visitante.
 
 En Carolina y en el bloque de balance de ELISA, muchas variables se construyen mediante:
 
-[
+$$
 x_L-x_V
-]
+$$
 
 Por ello:
 
