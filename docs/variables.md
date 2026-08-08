@@ -270,25 +270,25 @@ Representa la diferencia de rendimiento reciente entre ambos equipos.
 
 Para cada partido reciente:
 
-[
+$$
 DG_j=
 GF_j-GA_j
-]
+$$
 
 El promedio reciente es:
 
-[
+$$
 DGF_e=
 \frac{1}{w}
 \sum_{j=1}^{w}DG_j
-]
+$$
 
 Entonces:
 
-[
+$$
 x_6=
 DGF_L-DGF_V
-]
+$$
 
 Nombre:
 
@@ -304,25 +304,25 @@ Mide la diferencia entre los saldos goleadores recientes de ambos equipos.
 
 Para cada partido:
 
-[
+$$
 DTP_j=
 TPF_j-TPC_j
-]
+$$
 
 El promedio reciente es:
 
-[
+$$
 DTPF_e=
 \frac{1}{w}
 \sum_{j=1}^{w}DTP_j
-]
+$$
 
 Entonces:
 
-[
+$$
 x_7=
 DTPF_L-DTPF_V
-]
+$$
 
 Nombre:
 
@@ -338,17 +338,17 @@ Mide el dominio reciente utilizando tiros a portería generados y recibidos.
 
 Carolina utiliza la expresión suavizada:
 
-[
+$$
 Prec_e=
 \frac{TPF_e+1}{TF_e+2}
-]
+$$
 
 Entonces:
 
-[
+$$
 x_8=
 Prec_L-Prec_V
-]
+$$
 
 Nombre:
 
@@ -360,11 +360,11 @@ Mide la capacidad para convertir tiros totales en tiros dirigidos a portería.
 
 Conceptualmente:
 
-[
+$$
 \text{tiros}
 \rightarrow
 \text{tiros a portería}
-]
+$$
 
 ---
 
@@ -372,17 +372,17 @@ Conceptualmente:
 
 Se utiliza:
 
-[
+$$
 Def_e=
 \frac{GF_e+1}{TPF_e+5}
-]
+$$
 
 Entonces:
 
-[
+$$
 x_9=
 Def_L-Def_V
-]
+$$
 
 Nombre:
 
@@ -392,11 +392,11 @@ Nombre:
 
 Mide la capacidad para convertir tiros a portería en goles:
 
-[
+$$
 \text{tiros a portería}
 \rightarrow
 \text{goles}
-]
+$$
 
 La precisión y la definición representan dos etapas ofensivas distintas.
 
@@ -406,17 +406,17 @@ La precisión y la definición representan dos etapas ofensivas distintas.
 
 Se define:
 
-[
+$$
 Res_e=
 \frac{TPC_e-GA_e+1}{TPC_e+2}
-]
+$$
 
 Entonces:
 
-[
+$$
 x_{10}=
 Res_L-Res_V
-]
+$$
 
 Nombre:
 
@@ -440,17 +440,17 @@ No debe interpretarse exclusivamente como una medida del portero.
 
 Para cada equipo:
 
-[
+$$
 AP_e=
 \frac{A_e}{n_e}
-]
+$$
 
 Entonces:
 
-[
+$$
 x_{11}=
 AP_L-AP_V
-]
+$$
 
 Nombre:
 
@@ -468,17 +468,17 @@ Un valor positivo solamente significa que el local recibe más tarjetas amarilla
 
 Para cada equipo:
 
-[
+$$
 RP_e=
 \frac{R_e}{n_e}
-]
+$$
 
 Entonces:
 
-[
+$$
 x_{12}=
 RP_L-RP_V
-]
+$$
 
 Nombre:
 
@@ -496,22 +496,22 @@ Las doce variables tienen escalas distintas.
 
 Por ello se transforman mediante:
 
-[
+$$
 z_j=
 \frac{x_j-\mu_j}{\sigma_j}
-]
+$$
 
 donde:
 
-* (\mu_j): media de la variable en los datos de entrenamiento.
-* (\sigma_j): desviación estándar.
+* $\mu_j$: media de la variable en los datos de entrenamiento.
+* $\sigma_j$: desviación estándar.
 
 El partido queda representado mediante:
 
-[
+$$
 \mathbf z=
 [z_1,z_2,\ldots,z_{12}]
-]
+$$
 
 ---
 
