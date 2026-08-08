@@ -278,7 +278,7 @@ SOTPM=
 }
 $$
 
-Por tanto, ELISA **no usa simplemente (GF/n)**.
+Por tanto, ELISA **no usa simplemente $GF/n$**.
 
 ---
 
