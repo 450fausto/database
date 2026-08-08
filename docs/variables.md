@@ -605,39 +605,31 @@ $$
 
 Carolina ver12 utiliza:
 
-[
-P(D\mid m)
-==========
-
-\sigma
-\left[
-\ell_{\max}
------------
-
+$$
 \left(
 \frac{m-c}{s}
 \right)^2
 \right]
-]
+$$
 
 donde:
 
-[
+$$
 \sigma(x)=
 \frac{1}{1+e^{-x}}
-]
+$$
 
 Los parámetros son:
 
-* (c): centro óptimo de la región de empate.
-* (s): anchura de esa región.
-* (\ell_{\max}): controla la probabilidad máxima.
+* $c$: centro óptimo de la región de empate.
+* $s$: anchura de esa región.
+* $\ell_{\max}$: controla la probabilidad máxima.
 
 Carolina reduce así las doce dimensiones originales a una coordenada geométrica:
 
-[
+$
 m=d_L-d_V
-]
+$
 
 ---
 
