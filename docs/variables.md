@@ -521,17 +521,17 @@ Carolina construye dos prototipos.
 
 ## Prototipo de victoria local
 
-[
+$$
 \mathbf p_L=
 E(\mathbf z\mid victoria\ local)
-]
+$$
 
 ## Prototipo de victoria visitante
 
-[
+$$
 \mathbf p_V=
 E(\mathbf z\mid victoria\ visitante)
-]
+$$
 
 Cada partido puede interpretarse como un punto dentro de un espacio de doce dimensiones.
 
@@ -541,15 +541,15 @@ Cada partido puede interpretarse como un punto dentro de un espacio de doce dime
 
 Cada dimensión recibe un peso:
 
-[
+$$
 w_j>0
-]
+$$
 
 con:
 
-[
+$$
 \sum_{j=1}^{12}w_j=12
-]
+$$
 
 Los pesos se obtienen mediante una transformación `softmax` de los parámetros optimizados.
 
@@ -561,43 +561,43 @@ Una variable con mayor peso ejerce una influencia mayor sobre la distancia entre
 
 La distancia respecto al prototipo de victoria local es:
 
-[
+$$
 d_L=
 \sqrt{
 \sum_{j=1}^{12}
 w_j
 (z_j-p_{L,j})^2
 }
-]
+$$
 
 La distancia respecto al prototipo visitante es:
 
-[
+$$
 d_V=
 \sqrt{
 \sum_{j=1}^{12}
 w_j
 (z_j-p_{V,j})^2
 }
-]
+$$
 
 Se define:
 
-[
+$$
 m=d_L-d_V
-]
+$$
 
 ### Interpretación
 
-* (m<0): partido más parecido al prototipo de victoria local.
-* (m>0): partido más parecido al prototipo de victoria visitante.
+* $m<0$: partido más parecido al prototipo de victoria local.
+* $m>0$: partido más parecido al prototipo de victoria visitante.
 * valores intermedios: región potencial de equilibrio.
 
 El centro de la región de empate no tiene por qué ser exactamente:
 
-[
+$$
 m=0
-]
+$$
 
 ---
 
