@@ -346,23 +346,21 @@ regularizada hacia la media de la liga.
 
 Primero se calcula el número de tiros a portería recibidos que no acabaron en gol:
 
-[
+$$
 Stops=
 \max(SOTA-GA,0)
-]
+$$
 
 La fuerza del prior es:
 
-[
-s_{Res}
-=======
-
+$$
+s_{Res}=
 s\max(\pi_T,1)
-]
+$$
 
 Entonces:
 
-[
+$$
 \boxed{
 Res=
 \frac{
@@ -371,7 +369,7 @@ Stops+s_{Res}\pi_{Res}
 SOTA+s_{Res}
 }
 }
-]
+$$
 
 Una resistencia alta indica una mayor proporción de tiros a portería recibidos que no terminan en gol.
 
