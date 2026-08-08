@@ -237,24 +237,24 @@ Mide la diferencia entre la capacidad goleadora neta del local jugando en casa y
 
 Carolina utiliza una ventana reciente de cinco partidos:
 
-[
+$$
 w=5
-]
+$$
 
 Para cada equipo:
 
-[
+$$
 PF_e=
 \frac{1}{w}
 \sum_{j=1}^{w}PTS_{e,j}
-]
+$$
 
 Entonces:
 
-[
+$$
 x_5=
 PF_L-PF_V
-]
+$$
 
 Nombre:
 
