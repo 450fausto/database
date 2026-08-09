@@ -1575,7 +1575,7 @@ Para una probabilidad nueva $p$:
 
 $$
 \boxed{
-Percentil=100\frac{ \mathtt \{ p_j\le p \} }{n}
+Percentil=100\frac{ \\# \\{ p_j \le p \\} }{n}
 }
 $$
 
