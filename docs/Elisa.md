@@ -1585,6 +1585,8 @@ $$
 
 Así, un percentil 93 significa que el nuevo valor es igual o superior aproximadamente al 93 % de las puntuaciones históricas.
 
+> Una probabilidad histórica no se actualiza con partidos posteriores. Puede recalcularse determinísticamente recorriendo de nuevo el historial, pero deberá producir el mismo valor siempre que no se modifiquen los datos históricos ni el modelo congelado. 
+
 ---
 
 # 34. Qué entra al historial
