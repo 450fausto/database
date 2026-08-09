@@ -521,116 +521,116 @@ Estos promedios recientes **no reciben el suavizado mediante $s$**.
 
 # 12. Las 9 variables de balance
 
-Con los perfiles anteriores, para un partido local (L) contra visitante (V), ELISA construye:
+Con los perfiles anteriores, para un partido local $L$ contra visitante $V$, ELISA construye:
 
-### (b_1): diferencia de goles por partido
+### $b_1$: diferencia de goles por partido
 
 Primero:
 
-[
+$$
 GDPM_L=GFPM_L-GAPM_L
-]
+$$
 
-[
+$$
 GDPM_V=GFPM_V-GAPM_V
-]
+$$
 
 Después:
 
-[
+$$
 \boxed{
 b_1=GDPM_L-GDPM_V
 }
-]
+$$
 
 ---
 
-### (b_2): diferencia de puntos por condición
+### $b_2$: diferencia de puntos por condición
 
-[
+$$
 \boxed{
 b_2=PtsCond_L-PtsCond_V
 }
-]
+$$
 
 ---
 
-### (b_3): diferencia de goles por condición
+### $b_3$: diferencia de goles por condición
 
-[
+$$
 \boxed{
 b_3=GDCond_L-GDCond_V
 }
-]
+$$
 
 ---
 
-### (b_4): diferencia de puntos de forma
+### $b_4$: diferencia de puntos de forma
 
-[
+$$
 \boxed{
 b_4=PF_L-PF_V
 }
-]
+$$
 
 ---
 
-### (b_5): diferencia de goles de forma
+### $b_5$: diferencia de goles de forma
 
-[
+$$
 \boxed{
 b_5=GDF_L-GDF_V
 }
-]
+$$
 
 ---
 
-### (b_6): diferencia de tiros a portería de forma
+### $b_6$: diferencia de tiros a portería de forma
 
-[
+$$
 \boxed{
 b_6=SOTDF_L-SOTDF_V
 }
-]
+$$
 
 ---
 
-### (b_7): diferencia de precisión
+### $b_7$: diferencia de precisión
 
-[
+$$
 \boxed{
 b_7=Prec_L-Prec_V
 }
-]
+$$
 
 ---
 
-### (b_8): diferencia de definición
+### $b_8$: diferencia de definición
 
-[
+$$
 \boxed{
 b_8=Def_L-Def_V
 }
-]
+$$
 
 ---
 
-### (b_9): diferencia de resistencia
+### $b_9$: diferencia de resistencia
 
-[
+$$
 \boxed{
 b_9=Res_L-Res_V
 }
-]
+$$
 
 El vector de balance es entonces:
 
-[
+$$
 \boxed{
 \mathbf b=
 [b_1,b_2,b_3,b_4,b_5,b_6,b_7,b_8,b_9]
 }
-]
+$$
 
 ---
 
