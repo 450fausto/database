@@ -638,109 +638,109 @@ $$
 
 Paralelamente se construyen:
 
-### (i_1): goles anotados combinados
+### $i_1$: goles anotados combinados
 
-[
+$$
 \boxed{
 i_1=GFPM_L+GFPM_V
 }
-]
+$$
 
-### (i_2): goles recibidos combinados
+### $i_2$: goles recibidos combinados
 
-[
+$$
 \boxed{
 i_2=GAPM_L+GAPM_V
 }
-]
+$$
 
-### (i_3): tiros combinados
+### $i_3$: tiros combinados
 
-[
+$$
 \boxed{
 i_3=SPM_L+SPM_V
 }
-]
+$$
 
 Ojo: aquí son **tiros a favor**, no diferencia tiros a favor menos tiros recibidos.
 
-### (i_4): tiros a portería combinados
+### $i_4$: tiros a portería combinados
 
-[
+$$
 \boxed{
 i_4=SOTPM_L+SOTPM_V
 }
-]
+$$
 
-### (i_5): definición combinada
+### $i_5$: definición combinada
 
-[
+$$
 \boxed{
 i_5=Def_L+Def_V
 }
-]
+$$
 
-### (i_6): vulnerabilidad combinada
+### $i_6$: vulnerabilidad combinada
 
 La vulnerabilidad individual es:
 
-[
+$$
 Vul=1-Res
-]
+$$
 
 Por tanto:
 
-[
+$$
 \boxed{
 i_6=(1-Res_L)+(1-Res_V)
 }
-]
+$$
 
-### (i_7): goles totales recientes
+### $i_7$: goles totales recientes
 
-[
+$$
 \boxed{
 i_7=
 \frac{GTF_L+GTF_V}{2}
 }
-]
+$$
 
-### (i_8): tiros a portería totales recientes
+### $i_8$: tiros a portería totales recientes
 
-[
+$$
 \boxed{
 i_8=
 \frac{TSOTF_L+TSOTF_V}{2}
 }
-]
+$$
 
-### (i_9): propensión a marcador bajo
+### $i_9$: propensión a marcador bajo
 
-[
+$$
 \boxed{
 i_9=
 \frac{LowF_L+LowF_V}{2}
 }
-]
+$$
 
 Así:
 
-[
+$$
 \boxed{
 \mathbf i=
 [i_1,i_2,i_3,i_4,i_5,i_6,i_7,i_8,i_9]
 }
-]
+$$
 
 ---
 
-# 14. Cómo se obtiene el balance latente (B)
+# 14. Cómo se obtiene el balance latente $B$
 
 Aquí comienza el aprendizaje del modelo.
 
 Tenemos una matriz de entrenamiento:
 
-[
+$$
 X_B=
 \begin{bmatrix}
 b_{11}&\cdots&b_{19}\
@@ -748,53 +748,51 @@ b_{21}&\cdots&b_{29}\
 \vdots&&\vdots\
 b_{N1}&\cdots&b_{N9}
 \end{bmatrix}
-]
+$$
 
 Para cada columna se calcula la **media de entrenamiento**:
 
-[
+$$
 \mu_j=
 \frac1N\sum_{k=1}^{N}X_{kj}
-]
+$$
 
 y la desviación estándar poblacional:
 
-[
+$$
 \sigma_j=
 \sqrt{
 \frac1N
 \sum_{k=1}^{N}(X_{kj}-\mu_j)^2
 }
-]
+$$
 
 El código utiliza:
 
-[
+$$
 ddof=0
-]
+$$
 
 Si:
 
-[
+$$
 \sigma_j<10^{-8}
-]
+$$
 
 se sustituye por:
 
-[
+$$
 \sigma_j=1
-]
+$$
 
 Cada variable se transforma exactamente mediante:
 
-[
+$$
 \boxed{
-Z_{kj}
-======
-
+Z_{kj}=
 \frac{X_{kj}-\mu_j}{\sigma_j}
 }
-]
+$$
 
 Ésta es la transformación que antes describí simplemente como “estandarización”.
 
