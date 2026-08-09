@@ -1,3 +1,7 @@
+# ELISA (Equilibrio e Intensidad Latente para la Selección de Empates)
+
+Es un clasificador binario prepartido específico por liga. A partir exclusivamente de información posterior de la temporada actual construye 18 características, las reduce mediante dos modelos Ridge a un balance latente B y una intensidad latente I, y estima mediante regresión logística una puntuación probabilística de empate. La versión 03 transforma esa puntuación en una decisión `EMPATE/ABSTENERSE` mediante un umbral percentilar adaptativo construido exclusivamente con predicciones de partidos elegibles ya concluidos de la misma temporada. 
+
 # 1. Datos mínimos que necesita ELISA
 
 Para cada partido necesita:
