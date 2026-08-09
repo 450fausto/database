@@ -1060,6 +1060,8 @@ $$
 
 por estabilidad numérica.
 
+> Durante el ajuste de la instancia de ELISA, la regresión logística se entranan con los valores $B$ e $I$ generados por los modelos Ridge ajustados sobre ese mismo conjunto de entrenamiento. La validación fuera de muestra se realiza posteriormente a nivel de la arquitectura completa. 
+
 ---
 
 # 21. Función que optimiza la regresión logística
