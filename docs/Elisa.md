@@ -1579,7 +1579,7 @@ Percentil=
 100
 \frac{#{p_j\le p}}
 {n}}
-]
+$$
 
 Así, un percentil 93 significa que el nuevo valor es igual o superior aproximadamente al 93 % de las puntuaciones históricas.
 
