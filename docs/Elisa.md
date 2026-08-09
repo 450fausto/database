@@ -1238,28 +1238,28 @@ Ahora podemos establecerla correctamente.
 
 | Carolina                    | ELISA                  |
 | --------------------------- | ---------------------- |
-| 1. diferencia goles/partido | (b_1)                  |
+| 1. diferencia goles/partido | $b_1$                  |
 | 2. diferencia tiros/partido | no existe directamente |
-| 3. puntos condición         | (b_2)                  |
-| 4. goles condición          | (b_3)                  |
-| 5. puntos forma             | (b_4)                  |
-| 6. goles forma              | (b_5)                  |
-| 7. tiros a portería forma   | (b_6)                  |
-| 8. precisión                | (b_7)                  |
-| 9. definición               | (b_8)                  |
-| 10. resistencia             | (b_9)                  |
+| 3. puntos condición         | $b_2$                  |
+| 4. goles condición          | $b_3$                  |
+| 5. puntos forma             | $b_4$                  |
+| 6. goles forma              | $b_5$                  |
+| 7. tiros a portería forma   | $b_6$                  |
+| 8. precisión                | $b_7$                  |
+| 9. definición               | $b_8$                  |
+| 10. resistencia             | $b_9$                  |
 | 11. amarillas               | no se utiliza          |
 | 12. rojas                   | no se utiliza          |
 
 Pero hay una salvedad crucial:
 
-[
+$$
 \boxed{
 b_j^{ELISA}
 \neq
 x_j^{Carolina}
 }
-]
+$$
 
 en general.
 
@@ -1267,19 +1267,19 @@ Aunque conceptualmente representen lo mismo, **ELISA aplica priors dinámicos de
 
 Por ejemplo, Carolina puede calcular una precisión usando:
 
-[
+$$
 \frac{SOTF+1}{SF+2}
-]
+$$
 
 mientras que ELISA utiliza:
 
-[
+$$
 \frac{
 SOTF+s_{Prec}\pi_{Prec}
 }{
 SF+s_{Prec}
 }
-]
+$$
 
 Son variables relacionadas, pero no idénticas.
 
@@ -1291,23 +1291,23 @@ No la incorporó al bloque de balance.
 
 En su lugar utiliza:
 
-[
+$$
 \boxed{
 i_3=SPM_L+SPM_V
 }
-]
+$$
 
 Es decir, transforma la idea de los tiros desde:
 
-[
+$$
 \text{¿quién domina en tiros?}
-]
+$$
 
 hacia:
 
-[
+$$
 \text{¿cuánto volumen de tiros aportan conjuntamente?}
-]
+$$
 
 Eso la convierte en una variable de **intensidad**, no de balance.
 
@@ -1327,33 +1327,33 @@ Para cada liga se prueban inicialmente:
 
 ### Ventana de forma
 
-[
+$$
 w\in{5,8}
-]
+$$
 
 ### Fuerza del prior
 
-[
+$$
 s\in{3,6}
-]
+$$
 
 ### Ridge latente
 
-[
+$$
 \lambda_R\in{0.1,1,10}
-]
+$$
 
 ### L2 logística
 
-[
+$$
 \lambda_L\in{0.01,0.1,1}
-]
+$$
 
 Esto produce:
 
-[
+$$
 2\times2\times3\times3=36
-]
+$$
 
 configuraciones.
 
@@ -1372,37 +1372,37 @@ Para cada combinación de hiperparámetros se hacen dos folds:
 
 Entrenar:
 
-[
+$$
 2022\text{-}2023
-]
+$$
 
 predecir:
 
-[
+$$
 2023\text{-}2024
-]
+$$
 
 ### Fold 2
 
 Entrenar:
 
-[
+$$
 2023\text{-}2024
-]
+$$
 
 predecir:
 
-[
+$$
 2022\text{-}2023
-]
+$$
 
 Las predicciones de ambos folds se concatenan.
 
 Sobre ellas se calcula el criterio, por defecto:
 
-[
+$$
 \boxed{\text{logloss de empate}}
-]
+$$
 
 La configuración con menor logloss OOF es la seleccionada.
 
@@ -1412,21 +1412,21 @@ La configuración con menor logloss OOF es la seleccionada.
 
 Después de elegir:
 
-[
+$$
 (w,s,\lambda_R,\lambda_L)
-]
+$$
 
 se concatenan los ejemplos elegibles de:
 
-[
+$$
 2022\text{-}2023
-]
+$$
 
 y:
 
-[
+$$
 2023\text{-}2024
-]
+$$
 
 y se vuelve a entrenar **desde cero** el modelo definitivo:
 
@@ -1438,15 +1438,15 @@ Este modelo queda congelado.
 
 Luego se aplica sin modificar parámetros a:
 
-[
+$$
 2024\text{-}2025
-]
+$$
 
 y:
 
-[
+$$
 2025\text{-}2026
-]
+$$
 
 ---
 
@@ -1454,9 +1454,9 @@ y:
 
 Un partido solo genera una predicción si ambos equipos tienen:
 
-[
+$$
 \boxed{n\ge8}
-]
+$$
 
 partidos anteriores en esa temporada.
 
@@ -1470,23 +1470,23 @@ Los ocho partidos no tienen que ser exactamente las primeras ocho jornadas del c
 
 La probabilidad:
 
-[
+$$
 P(D)
-]
+$$
 
 queda congelada cuando se genera.
 
-Supongamos que antes de un nuevo partido existen (n) probabilidades prepartido de partidos elegibles ya concluidos:
+Supongamos que antes de un nuevo partido existen $n$ probabilidades prepartido de partidos elegibles ya concluidos:
 
-[
+$$
 p_1,p_2,\ldots,p_n
-]
+$$
 
 Todas pertenecen a la **temporada actual**.
 
 Se ordenan de mayor a menor:
 
-[
+$$
 p_{(1)}
 \ge
 p_{(2)}
@@ -1494,17 +1494,17 @@ p_{(2)}
 \cdots
 \ge
 p_{(n)}
-]
+$$
 
 Para una cobertura:
 
-[
+$$
 q=0.10
-]
+$$
 
 se calcula:
 
-[
+$$
 \boxed{
 k=
 \max
@@ -1513,15 +1513,15 @@ k=
 \lceil qn\rceil
 \right)
 }
-]
+$$
 
 El umbral es:
 
-[
+$$
 \boxed{
 T=p_{(k)}
 }
-]
+$$
 
 es decir, el (k)-ésimo valor más alto.
 
@@ -1531,60 +1531,54 @@ es decir, el (k)-ésimo valor más alto.
 
 Cuando existen al menos 30 probabilidades históricas:
 
-[
+$$
 n\ge30
-]
+$$
 
 ELISA decide:
 
-[
+$$
 \boxed{
 P(D)_{\text{nuevo}}\ge T
 \Rightarrow EMPATE
 }
-]
+$$
 
 y:
 
-[
+$$
 \boxed{
 P(D)_{\text{nuevo}}<T
 \Rightarrow ABSTENERSE
 }
-]
+$$
 
 Si:
 
-[
+$$
 n<30
-]
+$$
 
 la salida es:
 
-[
+$$
 \boxed{
 CONSTRUYENDO_HISTORIAL
 }
-]
+$$
 
 ---
 
 # 33. Percentil histórico exacto
 
-Para una probabilidad nueva (p):
+Para una probabilidad nueva $p$:
 
-[
+$$
 \boxed{
-Percentil
-=========
-
+Percentil=
 100
-\frac{
-#{p_j\le p}
-}{
-n
-}
-}
+\frac{#{p_j\le p}}
+{n}}
 ]
 
 Así, un percentil 93 significa que el nuevo valor es igual o superior aproximadamente al 93 % de las puntuaciones históricas.
