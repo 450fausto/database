@@ -889,26 +889,24 @@ $$
 
 ---
 
-# 17. Cómo se obtiene la intensidad latente (I)
+# 17. Cómo se obtiene la intensidad latente $I$
 
 Exactamente el mismo procedimiento se aplica al vector de intensidad.
 
 Cada característica se estandariza usando **sus propias medias y desviaciones de entrenamiento**:
 
-[
-Z_{I,j}
-=======
-
+$$
+Z_{I,j}=
 \frac{i_j-\mu_{I,j}}{\sigma_{I,j}}
-]
+$$
 
 El objetivo ahora es:
 
-[
+$$
 \boxed{
 y_I=G_L+G_V
 }
-]
+$$
 
 Ejemplos:
 
@@ -918,24 +916,22 @@ Ejemplos:
 
 Se estima otra regresión Ridge:
 
-[
+$$
 \boxed{
-\hat{\boldsymbol\gamma}
-=======================
-
+\hat{\boldsymbol\gamma}=
 \left(
 A_I^TA_I+
 \lambda_RP
 \right)^{-1}
 A_I^Ty_I
 }
-]
+$$
 
 Utiliza **el mismo valor de `ridge_latent`** que el modelo de balance.
 
 Para un partido nuevo:
 
-[
+$$
 \boxed{
 I=
 \gamma_0+
@@ -943,47 +939,47 @@ I=
 \gamma_j
 \frac{i_j-\mu_{I,j}}{\sigma_{I,j}}
 }
-]
+$$
 
 y después:
 
-[
+$$
 \boxed{
 I\leftarrow\min(8,\max(0,I))
 }
-]
+$$
 
 Por tanto:
 
-[
-0\le I\le8
-]
+$$
+0 \le I \le 8
+$$
 
 ---
 
-# 18. De (B) e (I) a las variables finales
+# 18. De $B$ e $I$ a las variables finales
 
 ELISA sustituye primero:
 
-[
+$$
 b=|B|
-]
+$$
 
 y vuelve a limitarlo:
 
-[
-0\le b\le6
-]
+$$
+0 \le b \le 6
+$$
 
 La intensidad también permanece:
 
-[
-0\le I\le8
-]
+$$
+0 \le I \le 8
+$$
 
 Después construye exactamente seis columnas:
 
-[
+$$
 \boxed{
 \mathbf m=
 [
@@ -995,11 +991,11 @@ I^2,,
 bI
 ]
 }
-]
+$$
 
 Es decir:
 
-[
+$$
 \boxed{
 \mathbf m=
 [
@@ -1011,7 +1007,7 @@ I^2,,
 |B|I
 ]
 }
-]
+$$
 
 ---
 
@@ -1019,15 +1015,15 @@ I^2,,
 
 Se define:
 
-[
+$$
 \boxed{
 y_D=
 \begin{cases}
-1,&G_L=G_V\
-0,&G_L\neq G_V
+1, & G_L = G_V \\
+0, & G_L \neq G_V
 \end{cases}
 }
-]
+$$
 
 ---
 
