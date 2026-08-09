@@ -999,11 +999,11 @@ $$
 \boxed{
 \mathbf m=
 [
-1,,
-|B|,,
-|B|^2,,
-I,,
-I^2,,
+1,
+|B|,
+|B|^2,
+I,
+I^2,
 |B|I
 ]
 }
@@ -1328,25 +1328,25 @@ Para cada liga se prueban inicialmente:
 ### Ventana de forma
 
 $$
-w\in{5,8}
+w \in \\{ 5,8 \\}
 $$
 
 ### Fuerza del prior
 
 $$
-s\in{3,6}
+s \in \\{ 3,6 \\}
 $$
 
 ### Ridge latente
 
 $$
-\lambda_R\in{0.1,1,10}
+\lambda_R \in \\{ 0.1,1,10 \\}
 $$
 
 ### L2 logística
 
 $$
-\lambda_L\in{0.01,0.1,1}
+\lambda_L \in \\{ 0.01,0.1,1 \\}
 $$
 
 Esto produce:
