@@ -1569,6 +1569,8 @@ CONSTRUYENDO \textunderscore HISTORIAL
 }
 $$
 
+> Si varios partidos tienen exactamente la misma probabilidad que el partido situado en la frontera $T$, todos cumplen $P(D) \ge T$. 
+
 ---
 
 # 33. Percentil histórico exacto
