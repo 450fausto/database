@@ -794,102 +794,98 @@ Z_{kj}=
 }
 $$
 
-Ésta es la transformación que antes describí simplemente como “estandarización”.
-
 ---
 
 # 15. Objetivo del modelo de balance
 
 Para cada partido de entrenamiento:
 
-[
+$$
 \boxed{
 y_B=G_L-G_V
 }
-]
+$$
 
 Por ejemplo:
 
-* 2-0: (y_B=2);
-* 1-1: (y_B=0);
-* 0-3: (y_B=-3).
+* 2-0: $y_B=2$;
+* 1-1: $y_B=0$;
+* 0-3: $y_B=-3$.
 
 Se añade una columna de unos:
 
-[
+$$
 A_B=
 \begin{bmatrix}
-1&Z_{11}&\cdots&Z_{19}\
-1&Z_{21}&\cdots&Z_{29}\
-\vdots&&&\vdots
+1 & Z_{11} & \cdots & Z_{19} \\
+1 & Z_{21} & \cdots & Z_{29} \\ 
+\vdots & & & \vdots
 \end{bmatrix}
-]
+$$
 
 ---
 
-# 16. Ridge exacta para (B)
+# 16. Ridge exacta para $B$
 
 Los parámetros se calculan mediante:
 
-[
+$$
 \boxed{
-\hat{\boldsymbol\beta}
-======================
-
+\hat{\boldsymbol\beta}=
 \left(
 A_B^TA_B+
 \lambda_RP
 \right)^{-1}
 A_B^Ty_B
 }
-]
+$$
 
 donde:
 
-[
+$$
 P=
 \begin{bmatrix}
-0&0&\cdots&0\
-0&1&&0\
-\vdots&&\ddots&\
-0&0&&1
+0 & 0 & \cdots & 0 \\
+0 & 1 & & 0 \\
+\vdots & & \ddots & \\
+0 & 0 & & 1
 \end{bmatrix}
-]
+$$
 
 El intercepto **no se penaliza**.
 
 El parámetro:
 
-[
+$$
 \lambda_R
-]
+$$
 
 es `ridge_latent`.
 
 Por tanto, para un nuevo partido:
 
-[
+$$
 \boxed{
 B=
 \beta_0+
 \sum_{j=1}^{9}\beta_j
 \frac{b_j-\mu_{B,j}}{\sigma_{B,j}}
 }
-]
+$$
 
 Finalmente:
 
-[
+$$
 \boxed{
 B\leftarrow\min(6,\max(-6,B))
 }
-]
+$$
 
 Es decir:
 
-[
--6\le B\le6
-]
+$$
+-6 \le B \le 6
+$$
 
 ---
 
