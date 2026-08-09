@@ -743,10 +743,10 @@ Tenemos una matriz de entrenamiento:
 $$
 X_B=
 \begin{bmatrix}
-b_{11}&\cdots&b_{19}\
-b_{21}&\cdots&b_{29}\
-\vdots&&\vdots\
-b_{N1}&\cdots&b_{N9}
+b_{11} & \cdots & b_{19} \\
+b_{21} & \cdots & b_{29} \\
+\vdots & & \vdots \\
+b_{N1} & \cdots & b_{N9}
 \end{bmatrix}
 $$
 
