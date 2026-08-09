@@ -1563,7 +1563,7 @@ la salida es:
 
 $$
 \boxed{
-CONSTRUYENDO \text{_} HISTORIAL
+CONSTRUYENDO \text{\_} HISTORIAL
 }
 $$
 
