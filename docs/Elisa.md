@@ -910,9 +910,9 @@ $$
 
 Ejemplos:
 
-* 0-0: (y_I=0);
-* 1-1: (y_I=2);
-* 3-2: (y_I=5).
+* 0-0: $y_I=0$;
+* 1-1: $y_I=2$;
+* 3-2: $y_I=5$.
 
 Se estima otra regresión Ridge:
 
