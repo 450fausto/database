@@ -1794,7 +1794,7 @@ o:
 
 $$
 \boxed{
-P(D)_t<T_t
+P(D)_t \lt T_t
 \Rightarrow ABSTENERSE
 }
 $$
