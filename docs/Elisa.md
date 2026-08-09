@@ -1601,9 +1601,9 @@ No solamente:
 
 Entran todas sus probabilidades prepartido:
 
-%%
+$$
 p_1, p_2, \ldots
-%%
+$$
 
 El **resultado real no se usa para construir el percentil**.
 
