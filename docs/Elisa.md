@@ -983,11 +983,11 @@ $$
 \boxed{
 \mathbf m=
 [
-1,,
-b,,
-b^2,,
-I,,
-I^2,,
+1,
+b,
+b^2,
+I,
+I^2,
 bI
 ]
 }
@@ -1031,7 +1031,7 @@ $$
 
 El predictor es:
 
-[
+$$
 \boxed{
 \eta=
 \theta_0+
@@ -1041,22 +1041,22 @@ El predictor es:
 \theta_4I^2+
 \theta_5|B|I
 }
-]
+$$
 
 La probabilidad de empate es:
 
-[
+$$
 \boxed{
 P(D)=
 \frac{1}{1+\exp(-\eta)}
 }
-]
+$$
 
 Antes de calcular la exponencial, el código limita:
 
-[
--30\le\eta\le30
-]
+$$
+-30 \le \eta \le 30
+$$
 
 por estabilidad numérica.
 
@@ -1068,46 +1068,41 @@ Esto también es importante para reproducirla exactamente.
 
 ELISA minimiza la **suma**, no la media, de la entropía cruzada:
 
-[
+$$
 -\sum_{k=1}^{N}
 \left[
 y_k\log(p_k)
 +
 (1-y_k)\log(1-p_k)
 \right]
-]
+$$
 
 más una penalización L2:
 
-[
+$$
 \lambda_L
 \sum_{j=1}^{5}\theta_j^2
-]
+$$
 
 Por tanto:
 
-[
+$$
 \boxed{
-J(\boldsymbol\theta)
-====================
-
--\sum_{k=1}^{N}
+J(\boldsymbol\theta)=-\sum_{k=1}^{N}
 \left[
-y_k\log(p_k)
-+
+y_k\log(p_k)+
 (1-y_k)\log(1-p_k)
-\right]
-+
+\right]+
 \lambda_L
 \sum_{j=1}^{5}\theta_j^2
 }
-]
+$$
 
 El intercepto:
 
-[
+$$
 \theta_0
-]
+$$
 
 **no se penaliza**.
 
@@ -1121,45 +1116,45 @@ ELISA no deja todos los coeficientes completamente libres.
 
 Sus límites son:
 
-[
--10\le\theta_0\le10
-]
+$$
+-10 \le \theta_0 \le 10
+$$
 
-[
+$$
 \boxed{
--6\le\theta_1\le0
+-6 \le \theta_1 \le 0
 }
-]
+$$
 
 para (|B|);
 
-[
+$$
 \boxed{
--3\le\theta_2\le0
+-3 \le \theta_2 \le 0
 }
-]
+$$
 
-para (|B|^2);
+para $|B|^2$;
 
-[
--6\le\theta_3\le6
-]
+$$
+-6 \le \theta_3 \le 6
+$$
 
-para (I);
+para $I$;
 
-[
+$$
 \boxed{
 -3\le\theta_4\le0
 }
-]
+$$
 
-para (I^2);
+para $I^2$;
 
-[
+$$
 -3\le\theta_5\le3
-]
+$$
 
-para (|B|I).
+para $|B|I$.
 
 Esto impone una hipótesis estructural importante:
 
@@ -1167,21 +1162,21 @@ Esto impone una hipótesis estructural importante:
 
 Porque:
 
-[
-\theta_1\le0
-]
+$$
+\theta_1 \le 0
+$$
 
 y:
 
-[
-\theta_2\le0
-]
+$$
+\theta_2 \le 0
+$$
 
 También se obliga:
 
-[
+$$
 \theta_4\le0
-]
+$$
 
 lo que permite que el efecto de la intensidad presente concavidad.
 
