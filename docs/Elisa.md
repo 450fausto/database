@@ -1589,9 +1589,9 @@ Así, un percentil 93 significa que el nuevo valor es igual o superior aproximad
 
 Al historial entran:
 
-[
+$$
 \boxed{\text{TODOS los partidos elegibles concluidos}}
-]
+$$
 
 No solamente:
 
@@ -1601,9 +1601,9 @@ No solamente:
 
 Entran todas sus probabilidades prepartido:
 
-[
-p_1,p_2,\ldots
-]
+%%
+p_1, p_2, \ldots
+%%
 
 El **resultado real no se usa para construir el percentil**.
 
@@ -1613,36 +1613,34 @@ El **resultado real no se usa para construir el percentil**.
 
 Supongamos que antes de una jornada tenemos:
 
-[
+$$
 H=
 [p_1,\ldots,p_{100}]
-]
+$$
 
 y ese día hay diez encuentros.
 
 Los diez se evalúan contra exactamente:
 
-[
+$$
 H
-]
+$$
 
 No ocurre:
 
-[
-H\rightarrow H+p_{101}
-]
+$$
+H \rightarrow H+p_{101}
+$$
 
 antes de evaluar el siguiente partido.
 
 Solo después de calcular los diez:
 
-[
-H_{\text{nuevo}}
-================
-
+$$
+H_{\text{nuevo}}=
 H+
-[p_{101},\ldots,p_{110}]
-]
+[p_{101}, \ldots, p_{110}]
+$$
 
 ---
 
@@ -1650,106 +1648,104 @@ H+
 
 La arquitectura reproducible puede resumirse así:
 
-[
+$$
 \boxed{
 \text{partidos anteriores}
 }
-]
+$$
 
-[
+$$
 \downarrow
-]
+$$
 
-[
+$$
 \boxed{
 \text{estado de equipos + estado de liga}
 }
-]
+$$
 
-[
+$$
 \downarrow
-]
+$$
 
-[
+$$
 \boxed{
 \text{priors dinámicos de liga}
 }
-]
+$$
 
-[
+$$
 \downarrow
-]
+$$
 
-[
+$$
 \boxed{
 \mathbf b\in\mathbb R^9,\qquad
 \mathbf i\in\mathbb R^9
 }
-]
+$$
 
-[
+$$
 \downarrow
-]
+$$
 
 Estandarización independiente:
 
-[
+$$
 z_j=\frac{x_j-\mu_j}{\sigma_j}
-]
+$$
 
-[
+$$
 \downarrow
-]
+$$
 
 Dos modelos Ridge:
 
-[
+$$
 \boxed{
 B=\beta_0+\mathbf z_B^T\boldsymbol\beta
 }
-]
+$$
 
-[
+$$
 \boxed{
 I=\gamma_0+\mathbf z_I^T\boldsymbol\gamma
 }
-]
+$$
 
-[
+$$
 \downarrow
-]
+$$
 
 Clipping:
 
-[
+$$
 B\in[-6,6],
 \qquad
 I\in[0,8]
-]
+$$
 
-[
+$$
 \downarrow
-]
+$$
 
 Transformación:
 
-[
+$$
 \boxed{
 [1,|B|,|B|^2,I,I^2,|B|I]
 }
-]
+$$
 
-[
+$$
 \downarrow
-]
+$$
 
 Regresión logística:
 
-[
+$$
 \boxed{
-P(D)
-====
-
+P(D)=
 \frac{1}{
 1+\exp[
 -(\theta_0+
@@ -1761,47 +1757,47 @@ P(D)
 ]
 }
 }
-]
+$$
 
-[
+$$
 \downarrow
-]
+$$
 
 Historial de probabilidades prepartido concluidas:
 
-[
+$$
 H_t={p_1,\ldots,p_{t-1}}
-]
+$$
 
-[
+$$
 \downarrow
-]
+$$
 
 Corte top 10 %:
 
-[
+$$
 T_t=p_{(\lceil0.10n\rceil)}
-]
+$$
 
-[
+$$
 \downarrow
-]
+$$
 
-[
+$$
 \boxed{
 P(D)_t\ge T_t
 \Rightarrow EMPATE
 }
-]
+$$
 
 o:
 
-[
+$$
 \boxed{
 P(D)_t<T_t
 \Rightarrow ABSTENERSE
 }
-]
+$$
 
 ---
 
