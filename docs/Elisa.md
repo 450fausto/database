@@ -1186,47 +1186,39 @@ lo que permite que el efecto de la intensidad presente concavidad.
 
 Sea la tasa de empates del entrenamiento:
 
-[
-\bar y_D
-========
-
-\frac1N\sum y_D
-]
+$$
+\bar{y}_D=
+\frac{1}{N}\sum y_D
+$$
 
 Se inicializa:
 
-[
-\theta_0^{(0)}
-==============
-
+$$
+\theta_0^{(0)}=
 \log
 \left(
 \frac{\bar y_D}{1-\bar y_D}
 \right)
-]
+$$
 
 Además:
 
-[
+$$
 \theta_1^{(0)}=-0.5
-]
+$$
 
-[
+$$
 \theta_4^{(0)}=-0.02
-]
+$$
 
 y:
 
-[
-\theta_2^{(0)}
-==============
-
-# \theta_3^{(0)}
-
-# \theta_5^{(0)}
-
+$$
+\theta_2^{(0)}=
+\theta_3^{(0)}=
+\theta_5^{(0)}=
 0
-]
+$$
 
 La optimización se realiza mediante:
 
