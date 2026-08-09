@@ -1548,7 +1548,7 @@ y:
 
 $$
 \boxed{
-P(D)_{\text{nuevo}}<T
+P(D)_{\text{nuevo}} \lt T
 \Rightarrow ABSTENERSE
 }
 $$
