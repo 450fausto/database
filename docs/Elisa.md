@@ -1539,7 +1539,7 @@ ELISA decide:
 
 $$
 \boxed{
-P(D)_{\text{nuevo}}\ge T
+P(D)_{\text{nuevo}} \ge T
 \Rightarrow EMPATE
 }
 $$
